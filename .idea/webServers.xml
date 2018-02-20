@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ssh://gary@localhost:99/home/gary/Envs/forum/bin/python2" name="ssh://gary@localhost:99/home/gary/Envs/forum/bin/python2">
+        <fileTransfer host="localhost" port="99" accessType="SFTP">
+          <option name="port" value="99" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ssh://gary@localhost:99/home/gary/Envs/forum/bin/python2" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="ssh://gary@localhost:99/home/gary/Envs/forum/bin/python2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/forum" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
