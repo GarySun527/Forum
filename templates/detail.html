@@ -16,20 +16,5 @@
 		{{ question2.content}}
 	</p>
 	<hr>
-	<h4>Comment: (0)</h4>
-	<form action="{{url_for('add_comment')}}" method="post">
-		<div class="form-group">
-			<input name="add_comment_templates" class="form-control" tpye="text" placeholder="Your Comment">
-			<input type="hidden" name="question_id" value="question2.id">
-		</div>
-		<div class="form-group" style="text-align: right">
-			<button class="btn btn-primary">Submit</button>
-		</div>
-	</form>
-	<ul>
-		{% for comment in question2.comments %}
-			<li>{{ comment.content }}</li>
-		{% endfor %}
-	</ul>
 
 {% endblock %}

@@ -4,16 +4,15 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from forum import app
 from exts import db
-from models import User, Question, Comment
+from models import User, Question
 
 manager = Manager(app)
 
-#使用Migrate绑定app和db
+#using Migrate is to set up app and db
 migrate = Migrate(app, db)
 
-#添加迁移脚本的命令到manager中
+# manager.py /init/migrate/upgrade
 manager.add_command('db', MigrateCommand)
 
-#如果是作为主文件运行的话
 if __name__ == "__main__":
     manager.run()

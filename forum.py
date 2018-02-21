@@ -1,6 +1,6 @@
 from flask import Flask, render_template,request, redirect, url_for,session
 import config
-from models import User, Question, Comment
+from models import User, Question
 from exts import db
 from decorators import login_required
 
@@ -89,22 +89,6 @@ def detail(question_id):
     question_model = Question.query.filter(Question.id == question_id).first()
     # question is in the templates.
     return render_template('detail.html', question2=question_model)
-
-@app.route('/add_comment/', methods=['POST'])
-@login_required
-def add_comment():
-    content = request.form.get('add_comment_templates')
-    question_id = request.form.get('question_id')
-
-    answer = Comment(content=content)
-    user_id = session['user_id']
-    user = User.query.filter(User.id == user_id).first()
-    answer.author =  user
-    question = Comment.query.filter(Comment.id == question_id).first()
-    answer.qeustion = question
-    db.session(answer)
-    db.session.commit()
-    return redirect(url_for('detail', question_id=question_id))
 
 if __name__ == '__main__':
     app.run()
